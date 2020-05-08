@@ -1,3 +1,6 @@
+[![Gem Version](https://badge.fury.io/rb/histock-filter.svg)](https://badge.fury.io/rb/histock-filter)
+[![Build Status](https://travis-ci.org/ysato5654/histock-filter.svg?branch=master)](https://travis-ci.org/ysato5654/histock-filter)
+
 # Histock::Filter
 
 [HiStock嗨投資理財社群](https://histock.tw/) filter by Ruby
