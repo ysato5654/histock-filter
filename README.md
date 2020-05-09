@@ -4,7 +4,10 @@
 
 # Histock::Filter
 
-[HiStock嗨投資理財社群](https://histock.tw/) filter by Ruby
+histock-filter is Ruby library to get the finance data of listed stock on the Taiwan stock exchange market from [HiStock嗨投資理財社群](https://histock.tw/).
+
+If you would like to get more basic data (row data), refer to [histock-simplefilter](https://github.com/ysato5654/histock-simplefilter).
+
 
 ## Installation
 
@@ -28,7 +31,7 @@ $ gem install histock-filter
 
 ## Usage
 
-### Dividend policy
+### Dividend Policy
 
 ```rb
 histock = Histock::Filter.new
@@ -41,7 +44,7 @@ histock.dividend_policy('2330')
 # ]
 ```
 
-### Financial statements
+### Financial Statements
 
 ```rb
 histock = Histock::Simplefilter.new
