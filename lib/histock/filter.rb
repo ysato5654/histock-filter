@@ -3,7 +3,7 @@ require File.expand_path(File.dirname(__FILE__)) + '/filter/version'
 
 module Histock
     class Filter
-        CONFIG = ['dividend_policy']
+        CONFIG = ['dividend_policy', 'financial_statements']
 
         def initialize
         end
