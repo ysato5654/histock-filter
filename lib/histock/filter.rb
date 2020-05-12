@@ -23,8 +23,6 @@ module Histock
 
         CONFIG.last.each do |method_name|
             define_method method_name do |param, param2|
-                raise ArgumentError if param2 == 'month'
-
                 histock = Histock::Simplefilter.new
                 table = histock.send(method_name, param, param2)
 
@@ -48,18 +46,6 @@ module Histock
             end
 
             list
-        end
-    end
-
-    class Error < StandardError
-    end
-
-    class ArgumentError < Error
-
-        attr_reader :message
-
-        def initialize
-            @message = 'currently not supported'
         end
     end
 end
