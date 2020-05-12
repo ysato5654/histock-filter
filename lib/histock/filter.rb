@@ -1,5 +1,6 @@
 require 'histock/simplefilter'
 require File.expand_path(File.dirname(__FILE__)) + '/filter/version'
+require File.expand_path(File.dirname(__FILE__)) + '/filter/helper'
 
 module Histock
     class Filter
@@ -16,7 +17,7 @@ module Histock
                 histock = Histock::Simplefilter.new
                 table = histock.send(method_name, param)
 
-                table[1..-1].map { |e| table.first.zip(e).to_h }
+                parse(table)
             end
         end
 
@@ -27,8 +28,26 @@ module Histock
                 histock = Histock::Simplefilter.new
                 table = histock.send(method_name, param, param2)
 
-                table[1..-1].map { |e| table.first.zip(e).to_h }
+                parse(table)
             end
+        end
+
+        private
+
+        def parse(table)
+            list = table[1..-1].map { |e| table.first.zip(e).to_h }
+
+            list.each do |hash|
+                hash.each do |key, val|
+                    if Histock::Helper.is_persentage?(val)
+                        hash[key] = Histock::Helper.persentage_to_number(val)
+                    elsif Histock::Helper.is_currency?(val)
+                        hash[key] = Histock::Helper.currency_to_number(val)
+                    end
+                end
+            end
+
+            list
         end
     end
 
