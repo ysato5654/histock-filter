@@ -1,3 +1,9 @@
+## v1.0.0
+[full changelog](http://github.com/ysato5654/histock-filter/compare/v0.4.1...v1.0.0)
+
+* change class of output date
+    - String -> Integer / Float
+
 ## v0.4.1
 [full changelog](http://github.com/ysato5654/histock-filter/compare/v0.4.0...v0.4.1)
 
