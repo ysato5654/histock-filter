@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
     spec.add_runtime_dependency 'histock-simplefilter', '~> 0.4.0'
 
     spec.add_development_dependency 'bundler', '~> 2.0'
-    spec.add_development_dependency 'rake', '>= 12.3.3'
+    spec.add_development_dependency 'rake', '~> 13.0'
     spec.add_development_dependency 'rspec', '~> 3.0'
     spec.add_development_dependency 'travis', '>= 1.9.0'
 end
