@@ -135,4 +135,38 @@ RSpec.describe Histock::Filter do
             end
         end
     end
+
+    describe '#price_to_earning_ratio(code)' do
+        subject do
+            histock.price_to_earning_ratio(code)
+        end
+
+        let :keys do
+            ["年度/月份", "本益比"]
+        end
+
+        describe 'key' do
+            it 'is correct' do
+                expect(subject.first.keys).to eq(keys)
+                expect(subject.last.keys).to eq(keys)
+            end
+        end
+    end
+
+    describe '#price_book_ratio(code)' do
+        subject do
+            histock.price_book_ratio(code)
+        end
+
+        let :keys do
+            ["年度/月份", "股價淨值比"]
+        end
+
+        describe 'key' do
+            it 'is correct' do
+                expect(subject.first.keys).to eq(keys)
+                expect(subject.last.keys).to eq(keys)
+            end
+        end
+    end
 end
