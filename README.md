@@ -218,3 +218,45 @@ histock.income_rate('2330', 'year')
 #   :
 # ]
 ```
+
+### Corporate Value
+
+#### PER
+
+| key | type |
+|-----|------|
+| 年度/月份 | string |
+| 本益比 | float |
+
+```rb
+histock = Histock::Filter.new
+histock.price_to_earning_ratio('2330')
+# [
+#   {
+#     "年度/月份" => "2020/06",
+#     "本益比" => 20.44
+#   },
+#   {},
+#   :
+# ]
+```
+
+#### PBR
+
+| key | type |
+|-----|------|
+| 年度/月份 | string |
+| 股價淨值比 | float |
+
+```rb
+histock = Histock::Filter.new
+histock.price_book_ratio('2330')
+# [
+#   {
+#     "年度/月份" => "2020/06",
+#     "股價淨值比" => 4.89
+#   },
+#   {},
+#   :
+# ]
+```
