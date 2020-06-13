@@ -52,6 +52,8 @@ module Histock
                         hash[key] = Histock::Helper.persentage_to_number(val)
                     elsif Histock::Helper.is_currency?(val)
                         hash[key] = Histock::Helper.currency_to_number(val)
+                    elsif Histock::Helper.is_float?(val)
+                        hash[key] = val.to_f
                     end
                 end
             end
