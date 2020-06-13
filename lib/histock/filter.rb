@@ -5,8 +5,19 @@ require File.expand_path(File.dirname(__FILE__)) + '/filter/helper'
 module Histock
     class Filter
         CONFIG = [
-            ['monthly_revenue', 'income_statement', 'dividend_policy', 'profit_ratio'], # one argument
-            ['income_rate']                                                             # two arguments
+            # one argument
+            [
+                'monthly_revenue',
+                'income_statement',
+                'dividend_policy',
+                'profit_ratio',
+                'price_to_earning_ratio',
+                'price_book_ratio'
+            ],
+            # two arguments
+            [
+                'income_rate'
+            ]
         ]
 
         def initialize
