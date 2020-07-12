@@ -1,3 +1,9 @@
+## v1.2.0
+[full changelog](http://github.com/ysato5654/histock-filter/compare/v1.1.0...v1.2.0)
+
+* support new request
+    - company profile
+
 ## v1.1.0
 [full changelog](http://github.com/ysato5654/histock-filter/compare/v1.0.0...v1.1.0)
 
