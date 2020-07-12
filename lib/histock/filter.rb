@@ -41,6 +41,13 @@ module Histock
             end
         end
 
+        def company_profile(param)
+            histock = Histock::Simplefilter.new
+            table = histock.send(__method__, param)
+
+            table[0..1].transpose.to_h.merge(table[2..3].transpose.to_h)
+        end
+
         private
 
         def parse(table)
