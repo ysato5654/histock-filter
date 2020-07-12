@@ -169,4 +169,20 @@ RSpec.describe Histock::Filter do
             end
         end
     end
+
+    describe '#company_profile(code)' do
+        subject do
+            histock.company_profile(code)
+        end
+
+        let :keys do
+            ["成立日期", "董事長", "總經理", "公開發行日期", "實收資本額", "已發行普通股", "統一編號", "本益比", "內銷比重", "外銷比重", "股價淨值比", "現金殖利率"]
+        end
+
+        describe 'key' do
+            it 'is correct' do
+                expect(subject.keys).to eq(keys)
+            end
+        end
+    end
 end
